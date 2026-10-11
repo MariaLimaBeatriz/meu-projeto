@@ -9,4 +9,6 @@ public class excessoes6 {
         System.out.println(" o nome da posição 5 é: " + nome[5]);
     }catch (ArrayIndexOutOfBoundsException e) {
         System.out.println("a posição 5 não existe!");
-    }}}
+    }
+    }
+}
