@@ -1,0 +1,9 @@
+package org.example.aula14;
+
+public class Aluna extends Pessoa{
+
+
+    public Aluna(String nome, int idade) {
+        super(nome, idade);
+    }
+}
