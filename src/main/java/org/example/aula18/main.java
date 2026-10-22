@@ -4,16 +4,48 @@ package org.example.aula18;
 public class main {
     static void main() {
 
-        Agendamento petA = new Agendamento("Thor", "banho", "14h", true, true, "Alergico a Shampoo", 10.0);
+        Agendamento petA = Agendamento.builder()
+                .nomePet("Thor")
+                .servico("Banho")
+                .horario("14h")
+                .perfume(true)
+                .laco(true)
+                .obervacao("Alergico a Shampoo")
+                .desconto(10)
+                .build();
+        petA.mostrar();
 
+        System.out.println(" ---------------- próximo pet -------------");
 
-    Agendamento petB = new Agendamento("Luna", "tosa", "10h", false, false, "Sem obs", 0.0);
+        Agendamento petB = Agendamento.builder()
 
-    Agendamento petC = new Agendamento("Mel", "Banho", "16h", true, false, "sem obs", 0.0);
-        System.out.println(petA.mostrar());
-        System.out.println(petB.mostrar());
-        System.out.println(petC.mostrar());
+                .nomePet("Luna")
+                .servico("Tosa")
+                .horario("10h")
+                .obervacao("sem obs")
+                .perfume(false)
+                .laco(false)
+                .desconto(0)
 
+                .build();
+
+        petB.mostrar();
+
+        System.out.println(" ---------------- próximo pet -------------");
+
+        Agendamento petC = Agendamento.builder()
+
+                .nomePet("Mel")
+                .servico("banho")
+                .horario("16h")
+                .perfume(false)
+                .laco(false)
+                .obervacao("Sem obs")
+                .desconto(0)
+
+                .build();
+
+        petC.mostrar();
 
 }
 
